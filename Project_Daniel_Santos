@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Project_Daniel_Santos
+{
+  public static void main(String[] args)
+  {
+  
+  double GPUclockSpeed; 
+  double CPUclockSpeed;
+  double coreNumbers;
+  
+  Scanner keyboard = new Scanner(System.in);
+  
+  System.out.print("Please enter the clock speed (in Megahertz) of your graphics card.")
+    GPUclockSpeed = keyboard.nextDouble();
+  
+  System.out.print("Please enter the clockSpeed (in Megahertz) of your processor.")
+    CPUclockSpeed = keyboard.nextDouble();
+  
+  System.out.print("Please enter the number of cores your processor has.")
+    coreNumbers = keyboard.nextDouble();
+    
+  System.out.println("Resolution Menu:");
+  System.out.println("1. 1280 x 720");
+  System.out.println("2. 1920 x 1080");
+  System.out.println("3. 2560 x 1440");
+  System.out.println("4. 3840 x 2160");
+  
+  
+  
+  
+  
+  
