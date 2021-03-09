@@ -1,30 +1,123 @@
 import java.util.Scanner;
 
-public class Project_Daniel_Santos
+public class Project1_Daniel_Santos
 {
   public static void main(String[] args)
   {
   
-  double GPUclockSpeed; 
-  double CPUclockSpeed;
-  double coreNumbers;
-  
-  Scanner keyboard = new Scanner(System.in);
-  
-  System.out.print("Please enter the clock speed (in Megahertz) of your graphics card.")
-    GPUclockSpeed = keyboard.nextDouble();
-  
-  System.out.print("Please enter the clockSpeed (in Megahertz) of your processor.")
-    CPUclockSpeed = keyboard.nextDouble();
-  
-  System.out.print("Please enter the number of cores your processor has.")
-    coreNumbers = keyboard.nextDouble();
+    double GPUclockSpeed = 0.0; 
+    double CPUclockSpeed = 0.0;
+    double coreNumbers = 0.0;
+    double multiplier = 0.0;
+    double length = 0.0;
+    double width = 0.0;
+    int menuChoice = 0;
+
+    final double lowResolutioLENGTH = 1280;
+    final double midResolutioLENGTH = 1920;
+    final double highResolutioLENGTH = 2560;
+    final double ultraResolutonLENGTH = 3840;
     
-  System.out.println("Resolution Menu:");
-  System.out.println("1. 1280 x 720");
-  System.out.println("2. 1920 x 1080");
-  System.out.println("3. 2560 x 1440");
-  System.out.println("4. 3840 x 2160");
+    final double lowResolutionWIDTH = 720;
+    final double midResolutionWIDTH = 1080;
+    final double highResolutionWIDTH = 1440;
+    final double ultraResolutionWIDTH = 2160;
+    
+    final double lowMultiplier = 1.0;
+    final double midMultiplier = 0.75;
+    final double highMultiplier = 0.55;
+    final double ultraMultiplier = 0.35;
+
+    final int lowResolution = 1;
+    final int midResolution = 2;
+    final int highResolution = 3;
+
+    Scanner keyboard = new Scanner(System.in);
+
+    System.out.print("Please enter the clock speed (in Megahertz) of your graphics card: ");
+      GPUclockSpeed = keyboard.nextDouble();
+
+    System.out.print("Please enter the clock speed (in Megahertz) of your processor: ");
+      CPUclockSpeed = keyboard.nextDouble();
+
+    System.out.print("Please enter the number of cores of your processor: ");
+      coreNumbers = keyboard.nextDouble();
+
+    System.out.println("What is the resolution of your monitor? ");
+    System.out.println("1. 1280 x 720");
+    System.out.println("2. 1920 x 1080");
+    System.out.println("3. 2560 x 1440");
+    System.out.println("4. 3840 x 2160");
+
+    System.out.print("Please select from the options above: ");
+      menuChoice = keyboard.nextInt();
+
+   if (menuChoice == lowResolution)
+   {
+      multiplier = lowMultiplier;
+   }
+   else if (menuChoice == midResolution)
+   {
+      multiplier = midMultiplier;
+   }
+   else if (menuChoice == highResolution)
+   {
+      multiplier = highMultiplier;
+   else
+   {
+      multiplier = ultraMultiplier;
+   }
+
+   performanceScore = (5 * GPUclockSpeed) + (coreNumber * CPUclockSpeed) * (multiplier);
+
+   if(performanceScore <= 11000)
+   {
+      length = 0;
+      width = 0;
+      graphicsQuality = "Unable to Play;
+   }
+   else if(11000 < performanceScore <= 13000)
+   {
+      length = lowResolutionLENGTH;
+      width = lowResolutionWIDTH;
+      graphicsQuality = "Low";
+   }
+   else if(13000 < performanceScore <= 15000)
+   {
+      length = midResolutionLENGTH;
+      width = midResolutionWIDTH;
+      graphicsQuality = "Medium";
+   }
+   else if(15000 < performanceScore <= 17000)
+   {
+      length = highResolutionLENGTH;
+      width = highResolutionWIDTH;
+      graphicsQuality = "High";
+   }
+   else
+   {
+      length = ultraResolutionLENGTH;
+      width = ultraResolutionWIDTH;
+      graphicsQuality = "Ultra";
+   }
+
+   System.out.println("Computer Hardware Graphics Quality Recommendation Tool");
+
+   System.out.println("GPU Clock Speed: " + GPUclockSpeed + "MHz");
+   System.out.println("CPU Clock Speed: " + CPUclockSpeed + "MHZ");
+   System.out.println("Number of Cores: " + coreNumber);
+   System.out.println("Monitor Resolution: " + length + " x " + width);
+   System.out.println("Performance Score: " + performanceScore);
+   System.out.println("Reccomended Graphics Quality: " + graphicsQuality);
+  }
+}
+ 
+ 
+ 
+ 
+ 
+    
+  
   
   
   
